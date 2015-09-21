@@ -1,0 +1,35 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"> 
+<head> 
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>登录</title>
+	<link href='http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css' rel="stylesheet"> 
+</head>
+<body class="container">
+	<div style="width:300px;margin:100px auto;">
+	
+<form method='POST' class="form" enctype='multipart/form-data'>
+	{% csrf_token %}
+	<div class="form-group">
+	       
+	        <label for="id_username">用户名:</label>
+	        {{ lf.username }}
+	</div>
+	<div class="form-group">
+	     
+	        <label for="id_password">密码:</label>
+	        {{ lf.password }}
+	</div>
+
+	<button type="submit"
+	        id="login-button"
+	        class="btn btn-lg btn-primary btn-block">
+	    <span>ok</span>
+	</button>
+
+</form>
+<br>
+
+<div align="center">还没有账号？赶快加入我们吧，<a href="/outdoor/regist">免费注册</a></div>
+</div>
+</body>
+</html>

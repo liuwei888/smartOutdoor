@@ -1,0 +1,38 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"> 
+<head> 
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>注册</title>
+	<link href='http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css' rel="stylesheet"> 
+</head>
+<body class="container">
+	<div style="width:300px;margin:100px auto;">
+<form method='POST' enctype='multipart/form-data'>
+	{% csrf_token %}
+	<div class="form-group">
+	       
+	        <label for="id_username">用户名:</label>
+	        {{ rf.username }}
+	</div>
+	<div class="form-group">
+	     
+	        <label for="id_password">密码:</label>
+	        {{ rf.password }}
+	</div>
+	<div class="form-group">
+	     
+	        <label for="id_email">邮箱:</label>
+	        {{ rf.email }}
+	</div>
+
+	<button type="submit"
+	        id="login-button"
+	        class="btn btn-lg btn-primary btn-block">
+	    <span>ok</span>
+	</button>
+
+</form>
+<br>
+<div align="center">已有账号？赶快<a href="../login/">登录</a>吧</div></div>
+</body>
+</html>
+	
